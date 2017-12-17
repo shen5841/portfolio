@@ -1,0 +1,88 @@
+p {
+    font-size: 18px;
+    font-family: Arial;
+    margin: 20px;
+}
+
+.alligncenter {
+    text-align: center;
+}
+
+.margin-top {
+    margin-top: 20px;
+}
+
+.margin-bottom {
+    margin-bottom: 20px;
+}
+
+.lg-margin-top {
+    margin-top: 80px;    
+}    
+
+.mycontainer {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .mycontainer {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .mycontainer {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .mycontainer {
+    width: 1170px;
+  }
+}
+
+.img-project {
+    float: left;
+    margin: 10px;
+}
+
+.p-project {
+    clear: right;
+    margin: 10px;
+    position: relative;
+}
+
+.mydiv {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  border: 1px solid #000000;
+  max-width: 90%;
+  color: inherit;
+  background-color: #eee;
+  background-image: url("https://s-media-cache-ak0.pinimg.com/564x/11/06/91/1106912ed61c9d4fe9d0398577ab87da.jpg");
+}
+
+#mydiv2 {
+  border-radius: 10px;
+  border: 1px solid #000000;
+  max-width: 90%;
+  background-color: #fff;
+}
+
+.ul-list-font {
+  font-size: 18px;
+}
+
+.clear {
+  clear: both;  
+}
+
+.bodybackground {
+  background-image: url("http://www.youtodesign.com/uploads/allimg/1410/3060.jpg");
+  background-attachment: fixed;
+}
+

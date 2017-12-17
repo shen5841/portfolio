@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Felix Shen</title>
+        <link rel="stylesheet" type="text/css" href='bootstrap.css'/>
+        <link rel='stylesheet' type='text/css' href='stylesheet.css' />
+    </head>
+    
+    
+    <body class='bodybackground'>
+        <header>
+            <div class="container">
+                <div class="row">
+                    <h1>Felix Shen</h1>
+                    <ul class="nav nav-pills pull-right">
+                        <!--<li><a href='Shen_Home.html'>All</a></li>-->
+                        <li class='active'><a href="index.html">About me</a></li>
+                        <li><a href='Shen_Resume.html'>Resume</a></li>
+                        <li><a href='Shen_Projects.html'>Projects</a></li>
+                        <li><a href='Shen_Contact.html'>Contact Me</a></li>
+                    </ul> 
+                </div>
+            </div>
+        </header>
+        
+        
+        <section>
+            <div class='mydiv container'>
+                    <!--Add class 'p-project' when image is added, else class 'row', make width 70%-->
+                <div class='p-project'>    
+                    <!--make width: 200px-->
+                    <img id='mydiv2' style='float: left; margin: 10px; width: 200px' src='Images/FelixShen.jpg'/>
+                    <p>This is the about me page, I'm using bootstrap to make this page look good, but bootstrap is too hard for me, so this page should look pretty crappy, but everything is fine.</p>
+                    <p>I'm just like a plain, old Dublin High School student on school academics, at least I didn't fail any tests or got any Saturday schools before, so I consider myself a good, and hardworking student. I got all A's and B's in my classes so I don't have to worry too much about my grade, even though I'm no where near any Asian parent's expectations.</p>
+                    <p>When I'm off school academics I like to play basketball, golf, piano, and violin. I do a lot of stuff during the weekend and I'm usually very busy, I do not know a lot about egineering, computer, coding and stuff, and that is exactly why I'm in this class.
+                               I'm currently in the CSE class, and we do a lot of coding in this class, I've never code before but I found coding pretty fun. I don't know what I'll do as my career, or what kind of job I'll get, but I think coding is gonna make me rich because I'm gonna make the game GTA 10 and sit in the couch all day waiting for people to buy my game, and waiting for the money to come to my pocket and be rich.
+                               I'm currently in the robotics club and I joined because I've heard about it somewhere, and it sounds pretty fun. I've went to two robotics competition and our team won the robotics exellence award at the Bellarmine High School competition, which was my second competition.</p>
+                </div>
+            </div>
+        </section>
+        
+        
+        <footer class='clear'>
+            <div style='margin-top: 10px' class='container'>
+                <div class='row'>
+                    <a href='https://mail.google.com/' target='_blank'><img height='30' src='http://www.wuesd.org/uimg/file/1399702551490/912126401422655783.png?1461087654395' /></a>
+                    <a href='https://www.facebook.com/' target='_blank'><img height='30' style='margin-left: 10px' src='https://lh3.googleusercontent.com/ZZPdzvlpK9r_Df9C3M7j1rNRi7hhHRvPhlklJ3lfi5jk86Jd1s0Y5wcQ1QgbVaAP5Q=w170' /></a>            
+                </div>
+            </div>
+        </footer>
+        
+        <script>
+        /* Fades an element to given opacity */
+        /* reference link: http://stackoverflow.com/questions/14166774/how-to-make-an-image-fade-transition */
+        var fade = function(opacity, fn) {
+            this.addEventListener("webkitTransitionEnd", function end() {
+                this.removeEventListener("webkitTransitionEnd", end);
+                fn && fn.call(this);
+            }, false);
+            this.style.opacity = opacity;
+        };
+        /* Preloads an image */
+        var load = function(src, fn) {
+            var self = this, $img = document.getElementById('mydiv2');
+            $img.onload = function() {
+                fn && fn.call(self);
+            };
+            $img.src = src;
+        };
+        /* Steps:
+         *   1. Fades out current image.
+         *   2. Preloads next image.
+         *   3. When loading of next image is complete, sets next image.
+         *   4. Fades in.
+         */
+        var $img = document.getElementById("imgRand");
+        /* Fades out */
+        fade.call($img, 0, function() {
+            /* Get random dimensions */
+            var height = Math.ceil(Math.random() * 100) + 100;
+            var width = Math.ceil(Math.random() * 200) + 100;
+            var src = "http://placehold.it/" + width + "x" + height;
+            /* Preloading */
+            load.call(this, src, function() {
+                $img.setAttribute("src", src);
+                /* Fades in */
+                fade.call($img, 1);
+            });
+        });
+        </script>
+    </body> 
+    
+</html>    
